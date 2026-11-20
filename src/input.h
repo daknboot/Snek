@@ -3,7 +3,6 @@
 
 #include "defs.h"
 
-void ProcessArgs(int argc, char **argv);
-void HandleInputs(Snake *snake);
+void HandleInputs(Snake *snake, GameContext game);
 
 #endif
