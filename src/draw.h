@@ -2,8 +2,9 @@
 #define DRAW_H
 
 #include "defs.h"
-#include <raylib.h>
+#include "raylib.h"
 
+void StartDrawing();
 void DrawGridLines(GameContext game);
 void DrawSnake(Snake snake, GameContext game);
 void DrawFood(Food food, GameContext game);

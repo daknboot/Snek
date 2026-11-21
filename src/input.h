@@ -3,6 +3,6 @@
 
 #include "defs.h"
 
-void HandleInputs(Snake *snake, GameContext game);
+void HandleInputs(Snake *snake, Food *food, GameContext game);
 
 #endif

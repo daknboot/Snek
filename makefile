@@ -6,7 +6,7 @@ LDFLAGS =
 
 SRCDIR	=	src
 OBJDIR	=	build
-TARGET	=	app
+TARGET	=	snake
 
 SRC 	=	$(wildcard $(SRCDIR)/*.c)
 OBJ 	= 	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRC))

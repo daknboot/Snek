@@ -1,14 +1,11 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include <raylib.h>
+#include "raylib.h"
 
-// #define WIDTH 1000
-// #define HEIGHT 800
-
-// #define CELL_SIZE 40
-// #define COLS (WIDTH  / CELL_SIZE)
-// #define ROWS (HEIGHT / CELL_SIZE)
+typedef struct {
+	int x, y;
+} Vec2i;
 
 typedef enum {
 	UP, DOWN, LEFT, RIGHT
@@ -31,6 +28,7 @@ typedef struct {
 	int *x;
 	int *y;
 	int length, id;
+	bool bot;
 	Direction dir;
 	Color color;
 } Snake;

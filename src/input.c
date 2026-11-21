@@ -1,8 +1,8 @@
 #include "defs.h"
+#include "raylib.h"
 #include "snake.h"
-#include <raylib.h>
 
-void HandleInputs(Snake *snake, GameContext game)
+void HandleInputs(Snake *snake, Food *food, GameContext game)
 {
 	if (IsKeyDown(KEY_W) || IsKeyPressed(KEY_W)) {
 		if (snake->dir != DOWN)
@@ -26,5 +26,13 @@ void HandleInputs(Snake *snake, GameContext game)
 
 	if (IsKeyDown(KEY_R) || IsKeyPressed(KEY_R)) {
 		GrowSnake(snake, 1, game);
+	}
+
+	if (IsKeyDown(KEY_F) || IsKeyPressed(KEY_F)) {
+		SpawnFood(food, *snake, game);
+	}
+
+	if (IsKeyDown(KEY_SPACE) || IsKeyPressed(KEY_SPACE)) {
+		snake->bot = true;
 	}
 }

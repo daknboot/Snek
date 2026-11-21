@@ -1,6 +1,6 @@
 #include "draw.h"
 #include "defs.h"
-#include <raylib.h>
+#include "raylib.h"
 
 void DrawGridLines(GameContext game)
 {
@@ -37,4 +37,12 @@ void DrawScore(Snake player1, GameContext game)
 
 	DrawTextEx(game.font, score, shadowPos, 68, 6, BLACK);
 	DrawTextEx(game.font, score, pos, 64, 8, player1.color);
+}
+
+void StartDrawing()
+{
+	Color black = { 15, 15, 15, 255 };
+
+	BeginDrawing();
+	ClearBackground(black);
 }
